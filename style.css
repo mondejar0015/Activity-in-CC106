@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f19595;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  /* LEFT SECTION */
+  .left-section {
+    flex: 1;
+  }
+  
+  /* RIGHT SECTION */
+  .right-section {
+    flex: 1;
+  }
+  
+  h2, h3 {
+    margin-bottom: 10px;
+  }
+  
+  .summary {
+    margin-bottom: 20px;
+  }
+  
+  .summary p {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  
+  .form-container {
+    background: linear-gradient(to bottom, #fa0808 0%, #0f1315 100%);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form-container label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="number"] {
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .form-container input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .form-container button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .transaction-list {
+    background-color: #f6cbcb;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .transaction-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .transaction-list th, .transaction-list td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .transaction-list th {
+    background-color: #333;
+    color: #fff;
+  }
+  
