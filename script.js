@@ -8,11 +8,19 @@ function addTransaction() {
   const amountInput = document.getElementById('amount');
   const amount = parseFloat(amountInput.value);
 
+  
   if (!name || !category || isNaN(amount) || amount <= 0) {
     alert("Please fill in all fields correctly.");
     return;
   }
 
+  
+  if (type === "Expense" && totalExpense + amount > totalIncome) {
+    alert("You cannot add an expense that exceeds your available income.");
+    return;
+  }
+
+  
   const tableBody = document.getElementById('transactionTableBody');
   const newRow = tableBody.insertRow();
 
@@ -32,9 +40,10 @@ function addTransaction() {
     totalExpense += amount;
   }
 
+
   updateSummary();
 
-  // Clear form inputs
+  
   document.getElementById('name').value = '';
   document.getElementById('category').value = '';
   amountInput.value = '';

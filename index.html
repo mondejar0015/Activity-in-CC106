@@ -8,8 +8,6 @@
 <body>
 
   <div class="container">
-
-    <!-- LEFT SECTION -->
     <div class="left-section">
       <h2>Monthly Expense Calculator</h2>
       <div class="summary">
@@ -18,28 +16,30 @@
         <p><strong>Total Balance: P<span id="balance">0.00</span></strong></p>
       </div>
 
-      <div class="form-container">
-        <h3>Add Transaction</h3>
-        <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="e.g., Item Sale">
+      <form id="transactionForm" onsubmit="event.preventDefault(); addTransaction();">
+        <div class="form-container">
+          <h3>Add Transaction</h3>
 
-        <label for="category">Category:</label>
-        <input type="text" id="category" placeholder="e.g., Ecommerce">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="e.g., Item Sale">
 
-        <label>Type:</label>
-        <input type="radio" name="type" id="incomeType" value="Income" checked>
-        <label for="incomeType" style="display: inline;">Income</label>
-        <input type="radio" name="type" id="expenseType" value="Expense">
-        <label for="expenseType" style="display: inline;">Expense</label>
+          <label for="category">Category:</label>
+          <input type="text" id="category" placeholder="e.g., Ecommerce">
 
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" placeholder="e.g., 5000">
+          <label>Type:</label>
+          <input type="radio" name="type" id="incomeType" value="Income" checked>
+          <label for="incomeType" style="display: inline;">Income</label>
+          <input type="radio" name="type" id="expenseType" value="Expense">
+          <label for="expenseType" style="display: inline;">Expense</label>
 
-        <button onclick="addTransaction()">Submit</button>
-      </div>
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" placeholder="e.g., 5000">
+
+          <button type="submit">Submit</button>
+        </div>
+      </form>
     </div>
 
-    <!-- RIGHT SECTION -->
     <div class="right-section">
       <div class="transaction-list">
         <h3>Transaction List:</h3>
@@ -52,13 +52,10 @@
               <th>Amount</th>
             </tr>
           </thead>
-          <tbody id="transactionTableBody">
-            <!-- Transactions will appear here -->
-          </tbody>
+          <tbody id="transactionTableBody"></tbody>
         </table>
       </div>
     </div>
-
   </div>
 
   <script src="script.js"></script>

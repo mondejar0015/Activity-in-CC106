@@ -12,12 +12,12 @@ body {
     gap: 20px;
   }
   
-  /* LEFT SECTION */
+  
   .left-section {
     flex: 1;
   }
   
-  /* RIGHT SECTION */
+  
   .right-section {
     flex: 1;
   }
